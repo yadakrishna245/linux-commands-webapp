@@ -1,157 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linux Commands Cheat Sheet</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 100 Commands Cheat Sheet</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #38bdf8;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
-        h2 {
-            color: #facc15;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            padding: 6px 0;
-            border-bottom: 1px dashed #334155;
-        }
-
-        code {
-            color: #38bdf8;
-        }
-    </style>
+<style>
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #22c55e;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+}
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+}
+h2 {
+    color: #facc15;
+}
+li {
+    margin: 5px 0;
+}
+code {
+    color: #38bdf8;
+}
+</style>
 </head>
 
 <body>
 
-    <h1>🐧 Linux Commands Cheat Sheet</h1>
+<h1>🐧 Linux 100 Commands Cheat Sheet</h1>
 
-    <div class="container">
+<div class="container">
 
-        <!-- File Commands -->
-        <div class="card">
-            <h2>📁 File Commands</h2>
-            <ul>
-                <li><code>ls</code> - list files</li>
-                <li><code>ls -la</code> - detailed list</li>
-                <li><code>cd</code> - change directory</li>
-                <li><code>pwd</code> - current directory</li>
-                <li><code>touch file</code> - create file</li>
-                <li><code>cp src dest</code> - copy file</li>
-                <li><code>mv src dest</code> - move/rename</li>
-                <li><code>rm file</code> - delete file</li>
-                <li><code>rm -rf dir</code> - delete directory</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>📁 File & Directory</h2>
+<ul>
+<li><code>ls</code> - list files</li>
+<li><code>ls -la</code> - detailed list</li>
+<li><code>cd</code> - change directory</li>
+<li><code>pwd</code> - current path</li>
+<li><code>mkdir</code> - create directory</li>
+<li><code>rmdir</code> - remove empty dir</li>
+<li><code>rm</code> - delete file</li>
+<li><code>rm -rf</code> - force delete dir</li>
+<li><code>cp</code> - copy files</li>
+<li><code>mv</code> - move/rename</li>
+<li><code>touch</code> - create file</li>
+<li><code>stat</code> - file info</li>
+<li><code>tree</code> - directory tree</li>
+<li><code>basename</code> - extract filename</li>
+<li><code>dirname</code> - extract directory</li>
+</ul>
+</div>
 
-        <!-- System Commands -->
-        <div class="card">
-            <h2>⚙️ System Commands</h2>
-            <ul>
-                <li><code>top</code> - live processes</li>
-                <li><code>htop</code> - advanced process view</li>
-                <li><code>df -h</code> - disk usage</li>
-                <li><code>du -sh</code> - folder size</li>
-                <li><code>free -m</code> - memory usage</li>
-                <li><code>uptime</code> - system uptime</li>
-                <li><code>whoami</code> - current user</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>📖 File Viewing</h2>
+<ul>
+<li><code>cat</code> - show file content</li>
+<li><code>less</code> - view file scroll</li>
+<li><code>more</code> - paginated view</li>
+<li><code>head</code> - first lines</li>
+<li><code>tail</code> - last lines</li>
+<li><code>tail -f</code> - live logs</li>
+<li><code>nl</code> - show line numbers</li>
+<li><code>wc</code> - word count</li>
+<li><code>file</code> - file type</li>
+<li><code>strings</code> - readable content</li>
+</ul>
+</div>
 
-        <!-- Networking -->
-        <div class="card">
-            <h2>🌐 Networking</h2>
-            <ul>
-                <li><code>ping google.com</code> - check connectivity</li>
-                <li><code>ifconfig</code> - network info</li>
-                <li><code>ip a</code> - IP details</li>
-                <li><code>netstat -tulnp</code> - ports</li>
-                <li><code>ss -tulnp</code> - socket stats</li>
-                <li><code>curl url</code> - fetch data</li>
-                <li><code>wget url</code> - download file</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>🔍 Search & Text</h2>
+<ul>
+<li><code>grep</code> - search text</li>
+<li><code>grep -r</code> - recursive search</li>
+<li><code>find</code> - find files</li>
+<li><code>locate</code> - fast search</li>
+<li><code>which</code> - command path</li>
+<li><code>whereis</code> - binary location</li>
+<li><code>awk</code> - text processing</li>
+<li><code>sed</code> - stream edit</li>
+<li><code>cut</code> - extract columns</li>
+<li><code>sort</code> - sort lines</li>
+<li><code>uniq</code> - remove duplicates</li>
+<li><code>tr</code> - replace chars</li>
+</ul>
+</div>
 
-        <!-- User Management -->
-        <div class="card">
-            <h2>👤 User Commands</h2>
-            <ul>
-                <li><code>adduser user</code> - create user</li>
-                <li><code>passwd user</code> - set password</li>
-                <li><code>su user</code> - switch user</li>
-                <li><code>who</code> - logged users</li>
-                <li><code>id</code> - user info</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>⚙️ System</h2>
+<ul>
+<li><code>top</code> - processes</li>
+<li><code>htop</code> - advanced view</li>
+<li><code>uptime</code> - system uptime</li>
+<li><code>free -m</code> - memory</li>
+<li><code>df -h</code> - disk usage</li>
+<li><code>du -sh</code> - folder size</li>
+<li><code>uname -a</code> - system info</li>
+<li><code>hostname</code> - system name</li>
+<li><code>date</code> - current date</li>
+<li><code>cal</code> - calendar</li>
+</ul>
+</div>
 
-        <!-- Permissions -->
-        <div class="card">
-            <h2>🔐 Permissions</h2>
-            <ul>
-                <li><code>chmod 755 file</code> - change permission</li>
-                <li><code>chown user:file</code> - change owner</li>
-                <li><code>umask</code> - default permissions</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>🌐 Networking</h2>
+<ul>
+<li><code>ping</code> - connectivity</li>
+<li><code>ifconfig</code> - network config</li>
+<li><code>ip a</code> - IP info</li>
+<li><code>netstat</code> - network stats</li>
+<li><code>ss</code> - socket stats</li>
+<li><code>curl</code> - fetch URL</li>
+<li><code>wget</code> - download</li>
+<li><code>scp</code> - copy remote</li>
+<li><code>ssh</code> - remote login</li>
+<li><code>ftp</code> - file transfer</li>
+</ul>
+</div>
 
-        <!-- Package Management -->
-        <div class="card">
-            <h2>📦 Package Commands</h2>
-            <ul>
-                <li><code>apt update</code> - update packages</li>
-                <li><code>apt upgrade</code> - upgrade system</li>
-                <li><code>apt install pkg</code> - install package</li>
-                <li><code>yum install pkg</code> - install (RHEL)</li>
-                <li><code>dnf install pkg</code> - modern RHEL</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>👤 Users</h2>
+<ul>
+<li><code>whoami</code> - current user</li>
+<li><code>who</code> - logged users</li>
+<li><code>id</code> - user info</li>
+<li><code>adduser</code> - add user</li>
+<li><code>userdel</code> - delete user</li>
+<li><code>passwd</code> - change password</li>
+<li><code>su</code> - switch user</li>
+<li><code>sudo</code> - root command</li>
+</ul>
+</div>
 
-        <!-- Process Management -->
-        <div class="card">
-            <h2>🧠 Process Commands</h2>
-            <ul>
-                <li><code>ps aux</code> - process list</li>
-                <li><code>kill PID</code> - kill process</li>
-                <li><code>kill -9 PID</code> - force kill</li>
-                <li><code>bg</code> - background process</li>
-                <li><code>fg</code> - foreground process</li>
-            </ul>
-        </div>
+<div class="card">
+<h2>🔐 Permissions</h2>
+<ul>
+<li><code>chmod</code> - change permission</li>
+<li><code>chown</code> - change owner</li>
+<li><code>chgrp</code> - change group</li>
+<li><code>umask</code> - default perms</li>
+</ul>
+</div>
 
-    </div>
+<div class="card">
+<h2>📦 Packages</h2>
+<ul>
+<li><code>apt update</code> - update</li>
+<li><code>apt upgrade</code> - upgrade</li>
+<li><code>apt install</code> - install</li>
+<li><code>apt remove</code> - remove</li>
+<li><code>yum install</code> - install RHEL</li>
+<li><code>dnf install</code> - modern install</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🧠 Process</h2>
+<ul>
+<li><code>ps aux</code> - process list</li>
+<li><code>kill</code> - stop process</li>
+<li><code>kill -9</code> - force kill</li>
+<li><code>bg</code> - background</li>
+<li><code>fg</code> - foreground</li>
+<li><code>jobs</code> - job list</li>
+<li><code>nohup</code> - run persistent</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>📂 Compression</h2>
+<ul>
+<li><code>tar -cvf</code> - create tar</li>
+<li><code>tar -xvf</code> - extract tar</li>
+<li><code>gzip</code> - compress</li>
+<li><code>gunzip</code> - unzip</li>
+<li><code>zip</code> - zip file</li>
+<li><code>unzip</code> - unzip file</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🛠️ Disk</h2>
+<ul>
+<li><code>mount</code> - mount disk</li>
+<li><code>umount</code> - unmount</li>
+<li><code>lsblk</code> - block devices</li>
+<li><code>fdisk</code> - partition</li>
+<li><code>mkfs</code> - format disk</li>
+<li><code>blkid</code> - disk UUID</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>📜 Misc</h2>
+<ul>
+<li><code>history</code> - command history</li>
+<li><code>clear</code> - clear screen</li>
+<li><code>echo</code> - print text</li>
+<li><code>env</code> - environment vars</li>
+<li><code>export</code> - set variable</li>
+<li><code>alias</code> - shortcut cmd</li>
+<li><code>unalias</code> - remove alias</li>
+</ul>
+</div>
+
+</div>
 
 </body>
 </html>
