@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux 100 Commands Cheat Sheet</title>
+<title>DevOps Cheat Sheet</title>
 
 <style>
 body {
@@ -12,212 +12,152 @@ body {
     color: #e2e8f0;
     padding: 20px;
 }
+
 h1 {
     text-align: center;
     color: #22c55e;
 }
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 20px;
 }
+
 .card {
     background: #1e293b;
     padding: 15px;
     border-radius: 10px;
 }
+
 h2 {
     color: #facc15;
 }
-li {
+
+.command {
+    display: flex;
+    justify-content: space-between;
+    background: #334155;
     margin: 5px 0;
+    padding: 6px;
+    border-radius: 5px;
 }
+
 code {
     color: #38bdf8;
+}
+
+button {
+    background: #22c55e;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🐧 Linux 100 Commands Cheat Sheet</h1>
+<h1>🚀 DevOps + Linux Interactive Cheat Sheet</h1>
 
-<div class="container">
+<input type="text" id="search" placeholder="Search commands...">
 
+<div class="container" id="commands">
+
+<!-- Linux -->
 <div class="card">
-<h2>📁 File & Directory</h2>
-<ul>
-<li><code>ls</code> - list files</li>
-<li><code>ls -la</code> - detailed list</li>
-<li><code>cd</code> - change directory</li>
-<li><code>pwd</code> - current path</li>
-<li><code>mkdir</code> - create directory</li>
-<li><code>rmdir</code> - remove empty dir</li>
-<li><code>rm</code> - delete file</li>
-<li><code>rm -rf</code> - force delete dir</li>
-<li><code>cp</code> - copy files</li>
-<li><code>mv</code> - move/rename</li>
-<li><code>touch</code> - create file</li>
-<li><code>stat</code> - file info</li>
-<li><code>tree</code> - directory tree</li>
-<li><code>basename</code> - extract filename</li>
-<li><code>dirname</code> - extract directory</li>
-</ul>
+<h2>🐧 Linux</h2>
+
+<div class="command"><code>ls</code><button onclick="copy('ls')">copy</button></div>
+<div class="command"><code>cd /path</code><button onclick="copy('cd /path')">copy</button></div>
+<div class="command"><code>top</code><button onclick="copy('top')">copy</button></div>
+<div class="command"><code>df -h</code><button onclick="copy('df -h')">copy</button></div>
+<div class="command"><code>free -m</code><button onclick="copy('free -m')">copy</button></div>
+<div class="command"><code>ps aux</code><button onclick="copy('ps aux')">copy</button></div>
+
 </div>
 
+<!-- Git -->
 <div class="card">
-<h2>📖 File Viewing</h2>
-<ul>
-<li><code>cat</code> - show file content</li>
-<li><code>less</code> - view file scroll</li>
-<li><code>more</code> - paginated view</li>
-<li><code>head</code> - first lines</li>
-<li><code>tail</code> - last lines</li>
-<li><code>tail -f</code> - live logs</li>
-<li><code>nl</code> - show line numbers</li>
-<li><code>wc</code> - word count</li>
-<li><code>file</code> - file type</li>
-<li><code>strings</code> - readable content</li>
-</ul>
+<h2>🌿 Git</h2>
+
+<div class="command"><code>git clone repo</code><button onclick="copy('git clone repo')">copy</button></div>
+<div class="command"><code>git status</code><button onclick="copy('git status')">copy</button></div>
+<div class="command"><code>git add .</code><button onclick="copy('git add .')">copy</button></div>
+<div class="command"><code>git commit -m "msg"</code><button onclick="copy('git commit -m msg')">copy</button></div>
+<div class="command"><code>git push</code><button onclick="copy('git push')">copy</button></div>
+<div class="command"><code>git pull</code><button onclick="copy('git pull')">copy</button></div>
+
 </div>
 
+<!-- Docker -->
 <div class="card">
-<h2>🔍 Search & Text</h2>
-<ul>
-<li><code>grep</code> - search text</li>
-<li><code>grep -r</code> - recursive search</li>
-<li><code>find</code> - find files</li>
-<li><code>locate</code> - fast search</li>
-<li><code>which</code> - command path</li>
-<li><code>whereis</code> - binary location</li>
-<li><code>awk</code> - text processing</li>
-<li><code>sed</code> - stream edit</li>
-<li><code>cut</code> - extract columns</li>
-<li><code>sort</code> - sort lines</li>
-<li><code>uniq</code> - remove duplicates</li>
-<li><code>tr</code> - replace chars</li>
-</ul>
+<h2>🐳 Docker</h2>
+
+<div class="command"><code>docker ps</code><button onclick="copy('docker ps')">copy</button></div>
+<div class="command"><code>docker images</code><button onclick="copy('docker images')">copy</button></div>
+<div class="command"><code>docker run -d image</code><button onclick="copy('docker run -d image')">copy</button></div>
+<div class="command"><code>docker exec -it container bash</code><button onclick="copy('docker exec -it container bash')">copy</button></div>
+<div class="command"><code>docker build -t app .</code><button onclick="copy('docker build -t app .')">copy</button></div>
+<div class="command"><code>docker logs container</code><button onclick="copy('docker logs container')">copy</button></div>
+
 </div>
 
+<!-- Kubernetes -->
 <div class="card">
-<h2>⚙️ System</h2>
-<ul>
-<li><code>top</code> - processes</li>
-<li><code>htop</code> - advanced view</li>
-<li><code>uptime</code> - system uptime</li>
-<li><code>free -m</code> - memory</li>
-<li><code>df -h</code> - disk usage</li>
-<li><code>du -sh</code> - folder size</li>
-<li><code>uname -a</code> - system info</li>
-<li><code>hostname</code> - system name</li>
-<li><code>date</code> - current date</li>
-<li><code>cal</code> - calendar</li>
-</ul>
+<h2>☸️ Kubernetes</h2>
+
+<div class="command"><code>kubectl get pods</code><button onclick="copy('kubectl get pods')">copy</button></div>
+<div class="command"><code>kubectl get svc</code><button onclick="copy('kubectl get svc')">copy</button></div>
+<div class="command"><code>kubectl describe pod</code><button onclick="copy('kubectl describe pod')">copy</button></div>
+<div class="command"><code>kubectl logs pod</code><button onclick="copy('kubectl logs pod')">copy</button></div>
+<div class="command"><code>kubectl apply -f file.yaml</code><button onclick="copy('kubectl apply -f file.yaml')">copy</button></div>
+<div class="command"><code>kubectl exec -it pod bash</code><button onclick="copy('kubectl exec -it pod bash')">copy</button></div>
+
 </div>
 
+<!-- AWS -->
 <div class="card">
-<h2>🌐 Networking</h2>
-<ul>
-<li><code>ping</code> - connectivity</li>
-<li><code>ifconfig</code> - network config</li>
-<li><code>ip a</code> - IP info</li>
-<li><code>netstat</code> - network stats</li>
-<li><code>ss</code> - socket stats</li>
-<li><code>curl</code> - fetch URL</li>
-<li><code>wget</code> - download</li>
-<li><code>scp</code> - copy remote</li>
-<li><code>ssh</code> - remote login</li>
-<li><code>ftp</code> - file transfer</li>
-</ul>
-</div>
+<h2>☁️ AWS CLI</h2>
 
-<div class="card">
-<h2>👤 Users</h2>
-<ul>
-<li><code>whoami</code> - current user</li>
-<li><code>who</code> - logged users</li>
-<li><code>id</code> - user info</li>
-<li><code>adduser</code> - add user</li>
-<li><code>userdel</code> - delete user</li>
-<li><code>passwd</code> - change password</li>
-<li><code>su</code> - switch user</li>
-<li><code>sudo</code> - root command</li>
-</ul>
-</div>
+<div class="command"><code>aws configure</code><button onclick="copy('aws configure')">copy</button></div>
+<div class="command"><code>aws s3 ls</code><button onclick="copy('aws s3 ls')">copy</button></div>
+<div class="command"><code>aws s3 cp file s3://bucket</code><button onclick="copy('aws s3 cp file s3://bucket')">copy</button></div>
+<div class="command"><code>aws ec2 describe-instances</code><button onclick="copy('aws ec2 describe-instances')">copy</button></div>
+<div class="command"><code>aws ec2 start-instances</code><button onclick="copy('aws ec2 start-instances')">copy</button></div>
+<div class="command"><code>aws ec2 stop-instances</code><button onclick="copy('aws ec2 stop-instances')">copy</button></div>
 
-<div class="card">
-<h2>🔐 Permissions</h2>
-<ul>
-<li><code>chmod</code> - change permission</li>
-<li><code>chown</code> - change owner</li>
-<li><code>chgrp</code> - change group</li>
-<li><code>umask</code> - default perms</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>📦 Packages</h2>
-<ul>
-<li><code>apt update</code> - update</li>
-<li><code>apt upgrade</code> - upgrade</li>
-<li><code>apt install</code> - install</li>
-<li><code>apt remove</code> - remove</li>
-<li><code>yum install</code> - install RHEL</li>
-<li><code>dnf install</code> - modern install</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>🧠 Process</h2>
-<ul>
-<li><code>ps aux</code> - process list</li>
-<li><code>kill</code> - stop process</li>
-<li><code>kill -9</code> - force kill</li>
-<li><code>bg</code> - background</li>
-<li><code>fg</code> - foreground</li>
-<li><code>jobs</code> - job list</li>
-<li><code>nohup</code> - run persistent</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>📂 Compression</h2>
-<ul>
-<li><code>tar -cvf</code> - create tar</li>
-<li><code>tar -xvf</code> - extract tar</li>
-<li><code>gzip</code> - compress</li>
-<li><code>gunzip</code> - unzip</li>
-<li><code>zip</code> - zip file</li>
-<li><code>unzip</code> - unzip file</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>🛠️ Disk</h2>
-<ul>
-<li><code>mount</code> - mount disk</li>
-<li><code>umount</code> - unmount</li>
-<li><code>lsblk</code> - block devices</li>
-<li><code>fdisk</code> - partition</li>
-<li><code>mkfs</code> - format disk</li>
-<li><code>blkid</code> - disk UUID</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>📜 Misc</h2>
-<ul>
-<li><code>history</code> - command history</li>
-<li><code>clear</code> - clear screen</li>
-<li><code>echo</code> - print text</li>
-<li><code>env</code> - environment vars</li>
-<li><code>export</code> - set variable</li>
-<li><code>alias</code> - shortcut cmd</li>
-<li><code>unalias</code> - remove alias</li>
-</ul>
 </div>
 
 </div>
+
+<script>
+// Copy function
+function copy(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+
+// Search filter
+document.getElementById("search").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    let commands = document.getElementsByClassName("command");
+
+    for (let i = 0; i < commands.length; i++) {
+        let txt = commands[i].innerText.toLowerCase();
+        commands[i].style.display = txt.includes(filter) ? "" : "none";
+    }
+});
+</script>
 
 </body>
 </html>
