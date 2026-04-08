@@ -1,162 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOps Cheat Sheet</title>
+    <meta charset="UTF-8">
+    <title>DevOps Command Center</title>
 
-<style>
-body {
-    font-family: Arial;
-    background: #0f172a;
-    color: #e2e8f0;
-    padding: 20px;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
 
-h1 {
-    text-align: center;
-    color: #22c55e;
-}
+        header {
+            background: #0d47a1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: none;
-}
+        nav {
+            background: #1976d2;
+            padding: 10px;
+            text-align: center;
+        }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 20px;
-}
+        nav button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
 
-.card {
-    background: #1e293b;
-    padding: 15px;
-    border-radius: 10px;
-}
+        nav button:hover {
+            background: #ffcc00;
+        }
 
-h2 {
-    color: #facc15;
-}
+        iframe {
+            width: 100%;
+            height: 90vh;
+            border: none;
+        }
+    </style>
 
-.command {
-    display: flex;
-    justify-content: space-between;
-    background: #334155;
-    margin: 5px 0;
-    padding: 6px;
-    border-radius: 5px;
-}
-
-code {
-    color: #38bdf8;
-}
-
-button {
-    background: #22c55e;
-    border: none;
-    padding: 3px 8px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-</style>
 </head>
-
 <body>
 
-<h1>🚀 DevOps + Linux Interactive Cheat Sheet</h1>
+<header>
+    <h1>🚀 DevOps Command Center</h1>
+</header>
 
-<input type="text" id="search" placeholder="Search commands...">
+<nav>
+    <button onclick="loadPage('linux.html')">Linux</button>
+    <button onclick="loadPage('aws.html')">AWS</button>
+    <button onclick="loadPage('devops.html')">DevOps</button>
+</nav>
 
-<div class="container" id="commands">
-
-<!-- Linux -->
-<div class="card">
-<h2>🐧 Linux</h2>
-
-<div class="command"><code>ls</code><button onclick="copy('ls')">copy</button></div>
-<div class="command"><code>cd /path</code><button onclick="copy('cd /path')">copy</button></div>
-<div class="command"><code>top</code><button onclick="copy('top')">copy</button></div>
-<div class="command"><code>df -h</code><button onclick="copy('df -h')">copy</button></div>
-<div class="command"><code>free -m</code><button onclick="copy('free -m')">copy</button></div>
-<div class="command"><code>ps aux</code><button onclick="copy('ps aux')">copy</button></div>
-
-</div>
-
-<!-- Git -->
-<div class="card">
-<h2>🌿 Git</h2>
-
-<div class="command"><code>git clone repo</code><button onclick="copy('git clone repo')">copy</button></div>
-<div class="command"><code>git status</code><button onclick="copy('git status')">copy</button></div>
-<div class="command"><code>git add .</code><button onclick="copy('git add .')">copy</button></div>
-<div class="command"><code>git commit -m "msg"</code><button onclick="copy('git commit -m msg')">copy</button></div>
-<div class="command"><code>git push</code><button onclick="copy('git push')">copy</button></div>
-<div class="command"><code>git pull</code><button onclick="copy('git pull')">copy</button></div>
-
-</div>
-
-<!-- Docker -->
-<div class="card">
-<h2>🐳 Docker</h2>
-
-<div class="command"><code>docker ps</code><button onclick="copy('docker ps')">copy</button></div>
-<div class="command"><code>docker images</code><button onclick="copy('docker images')">copy</button></div>
-<div class="command"><code>docker run -d image</code><button onclick="copy('docker run -d image')">copy</button></div>
-<div class="command"><code>docker exec -it container bash</code><button onclick="copy('docker exec -it container bash')">copy</button></div>
-<div class="command"><code>docker build -t app .</code><button onclick="copy('docker build -t app .')">copy</button></div>
-<div class="command"><code>docker logs container</code><button onclick="copy('docker logs container')">copy</button></div>
-
-</div>
-
-<!-- Kubernetes -->
-<div class="card">
-<h2>☸️ Kubernetes</h2>
-
-<div class="command"><code>kubectl get pods</code><button onclick="copy('kubectl get pods')">copy</button></div>
-<div class="command"><code>kubectl get svc</code><button onclick="copy('kubectl get svc')">copy</button></div>
-<div class="command"><code>kubectl describe pod</code><button onclick="copy('kubectl describe pod')">copy</button></div>
-<div class="command"><code>kubectl logs pod</code><button onclick="copy('kubectl logs pod')">copy</button></div>
-<div class="command"><code>kubectl apply -f file.yaml</code><button onclick="copy('kubectl apply -f file.yaml')">copy</button></div>
-<div class="command"><code>kubectl exec -it pod bash</code><button onclick="copy('kubectl exec -it pod bash')">copy</button></div>
-
-</div>
-
-<!-- AWS -->
-<div class="card">
-<h2>☁️ AWS CLI</h2>
-
-<div class="command"><code>aws configure</code><button onclick="copy('aws configure')">copy</button></div>
-<div class="command"><code>aws s3 ls</code><button onclick="copy('aws s3 ls')">copy</button></div>
-<div class="command"><code>aws s3 cp file s3://bucket</code><button onclick="copy('aws s3 cp file s3://bucket')">copy</button></div>
-<div class="command"><code>aws ec2 describe-instances</code><button onclick="copy('aws ec2 describe-instances')">copy</button></div>
-<div class="command"><code>aws ec2 start-instances</code><button onclick="copy('aws ec2 start-instances')">copy</button></div>
-<div class="command"><code>aws ec2 stop-instances</code><button onclick="copy('aws ec2 stop-instances')">copy</button></div>
-
-</div>
-
-</div>
+<iframe id="contentFrame" src="linux-devops-commands.html"></iframe>
 
 <script>
-// Copy function
-function copy(text) {
-    navigator.clipboard.writeText(text);
-    alert("Copied: " + text);
-}
-
-// Search filter
-document.getElementById("search").addEventListener("keyup", function() {
-    let filter = this.value.toLowerCase();
-    let commands = document.getElementsByClassName("command");
-
-    for (let i = 0; i < commands.length; i++) {
-        let txt = commands[i].innerText.toLowerCase();
-        commands[i].style.display = txt.includes(filter) ? "" : "none";
+    function loadPage(page) {
+        document.getElementById('contentFrame').src = page;
     }
-});
 </script>
 
 </body>
