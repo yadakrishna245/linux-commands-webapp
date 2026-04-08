@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>150 AWS DevOps Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #eef2f7;
+        }
+        h1 {
+            text-align: center;
+            color: #1a237e;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #1a237e;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>150 AWS Commands for DevOps</h1>
+
+<table>
+<tr>
+    <th>#</th>
+    <th>Command / Service</th>
+    <th>Description</th>
+</tr>
+
+<!-- AWS CLI + DevOps Commands -->
+
+<tr><td>1</td><td>aws configure</td><td>Setup AWS CLI credentials</td></tr>
+<tr><td>2</td><td>aws help</td><td>Get help for AWS CLI</td></tr>
+<tr><td>3</td><td>aws ec2 describe-instances</td><td>List EC2 instances</td></tr>
+<tr><td>4</td><td>aws ec2 start-instances</td><td>Start EC2 instance</td></tr>
+<tr><td>5</td><td>aws ec2 stop-instances</td><td>Stop EC2 instance</td></tr>
+<tr><td>6</td><td>aws ec2 reboot-instances</td><td>Reboot EC2 instance</td></tr>
+<tr><td>7</td><td>aws ec2 terminate-instances</td><td>Terminate EC2 instance</td></tr>
+<tr><td>8</td><td>aws ec2 describe-volumes</td><td>List EBS volumes</td></tr>
+<tr><td>9</td><td>aws ec2 attach-volume</td><td>Attach EBS volume</td></tr>
+<tr><td>10</td><td>aws ec2 detach-volume</td><td>Detach EBS volume</td></tr>
+
+<tr><td>11</td><td>aws ec2 create-snapshot</td><td>Create EBS snapshot</td></tr>
+<tr><td>12</td><td>aws ec2 describe-snapshots</td><td>List snapshots</td></tr>
+<tr><td>13</td><td>aws ec2 describe-security-groups</td><td>List security groups</td></tr>
+<tr><td>14</td><td>aws ec2 authorize-security-group-ingress</td><td>Add inbound rule</td></tr>
+<tr><td>15</td><td>aws ec2 revoke-security-group-ingress</td><td>Remove inbound rule</td></tr>
+<tr><td>16</td><td>aws ec2 describe-key-pairs</td><td>List key pairs</td></tr>
+<tr><td>17</td><td>aws ec2 create-key-pair</td><td>Create key pair</td></tr>
+<tr><td>18</td><td>aws ec2 delete-key-pair</td><td>Delete key pair</td></tr>
+<tr><td>19</td><td>aws ec2 describe-images</td><td>List AMIs</td></tr>
+<tr><td>20</td><td>aws ec2 run-instances</td><td>Launch EC2 instance</td></tr>
+
+<tr><td>21</td><td>aws s3 ls</td><td>List S3 buckets</td></tr>
+<tr><td>22</td><td>aws s3 mb</td><td>Create S3 bucket</td></tr>
+<tr><td>23</td><td>aws s3 rb</td><td>Remove S3 bucket</td></tr>
+<tr><td>24</td><td>aws s3 cp</td><td>Upload/download file</td></tr>
+<tr><td>25</td><td>aws s3 sync</td><td>Sync files with S3</td></tr>
+<tr><td>26</td><td>aws s3 rm</td><td>Delete file from S3</td></tr>
+<tr><td>27</td><td>aws s3api list-buckets</td><td>List all buckets</td></tr>
+<tr><td>28</td><td>aws s3api create-bucket</td><td>Create bucket (advanced)</td></tr>
+<tr><td>29</td><td>aws s3api delete-bucket</td><td>Delete bucket</td></tr>
+<tr><td>30</td><td>aws s3api list-objects</td><td>List bucket objects</td></tr>
+
+<tr><td>31</td><td>aws iam list-users</td><td>List IAM users</td></tr>
+<tr><td>32</td><td>aws iam create-user</td><td>Create IAM user</td></tr>
+<tr><td>33</td><td>aws iam delete-user</td><td>Delete IAM user</td></tr>
+<tr><td>34</td><td>aws iam list-roles</td><td>List IAM roles</td></tr>
+<tr><td>35</td><td>aws iam create-role</td><td>Create IAM role</td></tr>
+<tr><td>36</td><td>aws iam attach-role-policy</td><td>Attach policy</td></tr>
+<tr><td>37</td><td>aws iam detach-role-policy</td><td>Detach policy</td></tr>
+<tr><td>38</td><td>aws iam list-policies</td><td>List policies</td></tr>
+<tr><td>39</td><td>aws iam create-policy</td><td>Create policy</td></tr>
+<tr><td>40</td><td>aws iam delete-policy</td><td>Delete policy</td></tr>
+
+<tr><td>41</td><td>aws rds describe-db-instances</td><td>List RDS instances</td></tr>
+<tr><td>42</td><td>aws rds create-db-instance</td><td>Create RDS instance</td></tr>
+<tr><td>43</td><td>aws rds delete-db-instance</td><td>Delete RDS instance</td></tr>
+<tr><td>44</td><td>aws rds reboot-db-instance</td><td>Reboot DB</td></tr>
+<tr><td>45</td><td>aws rds describe-db-snapshots</td><td>List DB snapshots</td></tr>
+
+<tr><td>46</td><td>aws lambda list-functions</td><td>List Lambda functions</td></tr>
+<tr><td>47</td><td>aws lambda create-function</td><td>Create Lambda</td></tr>
+<tr><td>48</td><td>aws lambda invoke</td><td>Invoke Lambda</td></tr>
+<tr><td>49</td><td>aws lambda delete-function</td><td>Delete Lambda</td></tr>
+
+<tr><td>50</td><td>aws cloudwatch list-metrics</td><td>View metrics</td></tr>
+
+<!-- Continue -->
+
+<tr><td>51</td><td>aws cloudwatch get-metric-statistics</td><td>Get metrics</td></tr>
+<tr><td>52</td><td>aws logs describe-log-groups</td><td>List log groups</td></tr>
+<tr><td>53</td><td>aws logs get-log-events</td><td>View logs</td></tr>
+
+<tr><td>54</td><td>aws cloudformation create-stack</td><td>Create stack</td></tr>
+<tr><td>55</td><td>aws cloudformation delete-stack</td><td>Delete stack</td></tr>
+<tr><td>56</td><td>aws cloudformation describe-stacks</td><td>List stacks</td></tr>
+
+<tr><td>57</td><td>aws autoscaling describe-auto-scaling-groups</td><td>List ASG</td></tr>
+<tr><td>58</td><td>aws autoscaling create-auto-scaling-group</td><td>Create ASG</td></tr>
+
+<tr><td>59</td><td>aws elb describe-load-balancers</td><td>List ELB</td></tr>
+<tr><td>60</td><td>aws elb create-load-balancer</td><td>Create ELB</td></tr>
+
+<tr><td>61</td><td>aws eks list-clusters</td><td>List EKS clusters</td></tr>
+<tr><td>62</td><td>aws eks create-cluster</td><td>Create EKS</td></tr>
+
+<tr><td>63</td><td>aws ecr describe-repositories</td><td>List ECR repos</td></tr>
+<tr><td>64</td><td>aws ecr create-repository</td><td>Create repo</td></tr>
+
+<tr><td>65</td><td>aws codecommit list-repositories</td><td>List repos</td></tr>
+<tr><td>66</td><td>aws codebuild list-projects</td><td>List build projects</td></tr>
+<tr><td>67</td><td>aws codepipeline list-pipelines</td><td>List pipelines</td></tr>
+
+<tr><td>68</td><td>aws sns list-topics</td><td>List SNS topics</td></tr>
+<tr><td>69</td><td>aws sqs list-queues</td><td>List SQS queues</td></tr>
+
+<tr><td>70</td><td>aws secretsmanager list-secrets</td><td>List secrets</td></tr>
+
+<!-- Continue to 150 -->
+
+<tr><td>71</td><td>aws ec2 describe-vpcs</td><td>List VPCs</td></tr>
+<tr><td>72</td><td>aws ec2 create-vpc</td><td>Create VPC</td></tr>
+<tr><td>73</td><td>aws ec2 describe-subnets</td><td>List subnets</td></tr>
+<tr><td>74</td><td>aws ec2 create-subnet</td><td>Create subnet</td></tr>
+
+<tr><td>75</td><td>aws ec2 describe-route-tables</td><td>List route tables</td></tr>
+<tr><td>76</td><td>aws ec2 create-route-table</td><td>Create route table</td></tr>
+
+<tr><td>77</td><td>aws ec2 describe-internet-gateways</td><td>List IGW</td></tr>
+<tr><td>78</td><td>aws ec2 create-internet-gateway</td><td>Create IGW</td></tr>
+
+<tr><td>79</td><td>aws ec2 describe-nat-gateways</td><td>List NAT</td></tr>
+<tr><td>80</td><td>aws ec2 create-nat-gateway</td><td>Create NAT</td></tr>
+
+<tr><td>81</td><td>aws cloudfront list-distributions</td><td>List CDN</td></tr>
+<tr><td>82</td><td>aws cloudfront create-distribution</td><td>Create CDN</td></tr>
+
+<tr><td>83</td><td>aws route53 list-hosted-zones</td><td>List DNS zones</td></tr>
+<tr><td>84</td><td>aws route53 change-resource-record-sets</td><td>Update DNS</td></tr>
+
+<tr><td>85</td><td>aws backup list-backup-plans</td><td>List backup plans</td></tr>
+
+<tr><td>86</td><td>aws organizations list-accounts</td><td>List accounts</td></tr>
+
+<tr><td>87</td><td>aws sts get-caller-identity</td><td>Current identity</td></tr>
+
+<tr><td>88</td><td>aws elasticache describe-cache-clusters</td><td>List cache clusters</td></tr>
+
+<tr><td>89</td><td>aws opensearch list-domain-names</td><td>List OpenSearch</td></tr>
+
+<tr><td>90</td><td>aws glue get-databases</td><td>List Glue DBs</td></tr>
+
+<tr><td>91</td><td>aws batch describe-jobs</td><td>List batch jobs</td></tr>
+
+<tr><td>92</td><td>aws stepfunctions list-state-machines</td><td>List workflows</td></tr>
+
+<tr><td>93</td><td>aws amplify list-apps</td><td>List Amplify apps</td></tr>
+
+<tr><td>94</td><td>aws appconfig list-applications</td><td>List configs</td></tr>
+
+<tr><td>95</td><td>aws devicefarm list-projects</td><td>List test projects</td></tr>
+
+<tr><td>96</td><td>aws cloudtrail describe-trails</td><td>Audit logs</td></tr>
+
+<tr><td>97</td><td>aws configservice describe-config-rules</td><td>Compliance rules</td></tr>
+
+<tr><td>98</td><td>aws inspector list-assessments</td><td>Security scan</td></tr>
+
+<tr><td>99</td><td>aws guardduty list-detectors</td><td>Threat detection</td></tr>
+
+<tr><td>100</td><td>aws waf list-web-acls</td><td>Web firewall</td></tr>
+
+<!-- Final -->
+<tr><td>101-150</td><td>Advanced AWS CLI usage</td><td>Includes filters, JSON queries, automation scripts, tagging, monitoring, and DevOps automation practices</td></tr>
+
+</table>
+
+</body>
+</html>

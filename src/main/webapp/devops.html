@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>100 DevOps Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f4f8;
+        }
+        h1 {
+            text-align: center;
+            color: #0d47a1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #0d47a1;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>100 DevOps Commands (Git, Docker, Kubernetes, Monitoring)</h1>
+
+<table>
+<tr>
+    <th>#</th>
+    <th>Command</th>
+    <th>Description</th>
+</tr>
+
+<!-- GIT COMMANDS -->
+<tr><td colspan="3"><b>Git Commands</b></td></tr>
+
+<tr><td>1</td><td>git init</td><td>Initialize repository</td></tr>
+<tr><td>2</td><td>git clone</td><td>Clone repo</td></tr>
+<tr><td>3</td><td>git status</td><td>Check status</td></tr>
+<tr><td>4</td><td>git add .</td><td>Add all files</td></tr>
+<tr><td>5</td><td>git commit -m</td><td>Commit changes</td></tr>
+<tr><td>6</td><td>git push</td><td>Push to remote</td></tr>
+<tr><td>7</td><td>git pull</td><td>Pull latest changes</td></tr>
+<tr><td>8</td><td>git fetch</td><td>Fetch updates</td></tr>
+<tr><td>9</td><td>git branch</td><td>List branches</td></tr>
+<tr><td>10</td><td>git checkout</td><td>Switch branch</td></tr>
+
+<tr><td>11</td><td>git merge</td><td>Merge branch</td></tr>
+<tr><td>12</td><td>git rebase</td><td>Rebase commits</td></tr>
+<tr><td>13</td><td>git log</td><td>Commit history</td></tr>
+<tr><td>14</td><td>git diff</td><td>Show differences</td></tr>
+<tr><td>15</td><td>git stash</td><td>Save temp changes</td></tr>
+<tr><td>16</td><td>git stash pop</td><td>Restore stash</td></tr>
+<tr><td>17</td><td>git reset --hard</td><td>Reset repo</td></tr>
+<tr><td>18</td><td>git revert</td><td>Undo commit safely</td></tr>
+<tr><td>19</td><td>git tag</td><td>Create tag</td></tr>
+<tr><td>20</td><td>git remote -v</td><td>View remotes</td></tr>
+
+<!-- DOCKER -->
+<tr><td colspan="3"><b>Docker Commands</b></td></tr>
+
+<tr><td>21</td><td>docker version</td><td>Check version</td></tr>
+<tr><td>22</td><td>docker info</td><td>System info</td></tr>
+<tr><td>23</td><td>docker pull</td><td>Pull image</td></tr>
+<tr><td>24</td><td>docker build -t</td><td>Build image</td></tr>
+<tr><td>25</td><td>docker images</td><td>List images</td></tr>
+<tr><td>26</td><td>docker run</td><td>Run container</td></tr>
+<tr><td>27</td><td>docker ps</td><td>Running containers</td></tr>
+<tr><td>28</td><td>docker ps -a</td><td>All containers</td></tr>
+<tr><td>29</td><td>docker stop</td><td>Stop container</td></tr>
+<tr><td>30</td><td>docker rm</td><td>Remove container</td></tr>
+
+<tr><td>31</td><td>docker rmi</td><td>Remove image</td></tr>
+<tr><td>32</td><td>docker exec -it</td><td>Access container</td></tr>
+<tr><td>33</td><td>docker logs</td><td>View logs</td></tr>
+<tr><td>34</td><td>docker inspect</td><td>Container details</td></tr>
+<tr><td>35</td><td>docker network ls</td><td>List networks</td></tr>
+<tr><td>36</td><td>docker volume ls</td><td>List volumes</td></tr>
+<tr><td>37</td><td>docker-compose up</td><td>Start services</td></tr>
+<tr><td>38</td><td>docker-compose down</td><td>Stop services</td></tr>
+<tr><td>39</td><td>docker tag</td><td>Tag image</td></tr>
+<tr><td>40</td><td>docker push</td><td>Push image</td></tr>
+
+<!-- KUBERNETES -->
+<tr><td colspan="3"><b>Kubernetes Commands</b></td></tr>
+
+<tr><td>41</td><td>kubectl get pods</td><td>List pods</td></tr>
+<tr><td>42</td><td>kubectl get nodes</td><td>Cluster nodes</td></tr>
+<tr><td>43</td><td>kubectl get svc</td><td>Services</td></tr>
+<tr><td>44</td><td>kubectl describe pod</td><td>Pod details</td></tr>
+<tr><td>45</td><td>kubectl logs</td><td>View logs</td></tr>
+<tr><td>46</td><td>kubectl exec -it</td><td>Exec into pod</td></tr>
+<tr><td>47</td><td>kubectl apply -f</td><td>Apply config</td></tr>
+<tr><td>48</td><td>kubectl delete -f</td><td>Delete config</td></tr>
+<tr><td>49</td><td>kubectl scale</td><td>Scale pods</td></tr>
+<tr><td>50</td><td>kubectl rollout status</td><td>Deployment status</td></tr>
+
+<tr><td>51</td><td>kubectl rollout restart</td><td>Restart deployment</td></tr>
+<tr><td>52</td><td>kubectl get deployments</td><td>List deployments</td></tr>
+<tr><td>53</td><td>kubectl describe node</td><td>Node info</td></tr>
+<tr><td>54</td><td>kubectl top pod</td><td>Resource usage</td></tr>
+<tr><td>55</td><td>kubectl top node</td><td>Node usage</td></tr>
+<tr><td>56</td><td>kubectl port-forward</td><td>Access service locally</td></tr>
+<tr><td>57</td><td>kubectl config get-contexts</td><td>Contexts list</td></tr>
+<tr><td>58</td><td>kubectl config use-context</td><td>Switch context</td></tr>
+<tr><td>59</td><td>kubectl get namespaces</td><td>List namespaces</td></tr>
+<tr><td>60</td><td>kubectl delete pod</td><td>Delete pod</td></tr>
+
+<!-- MONITORING -->
+<tr><td colspan="3"><b>Monitoring & Logs</b></td></tr>
+
+<tr><td>61</td><td>top</td><td>Real-time system usage</td></tr>
+<tr><td>62</td><td>htop</td><td>Advanced monitoring</td></tr>
+<tr><td>63</td><td>df -h</td><td>Disk usage</td></tr>
+<tr><td>64</td><td>free -m</td><td>Memory usage</td></tr>
+<tr><td>65</td><td>vmstat</td><td>System stats</td></tr>
+<tr><td>66</td><td>iostat</td><td>Disk IO</td></tr>
+<tr><td>67</td><td>netstat</td><td>Network stats</td></tr>
+<tr><td>68</td><td>ss -tuln</td><td>Open ports</td></tr>
+<tr><td>69</td><td>uptime</td><td>System uptime</td></tr>
+<tr><td>70</td><td>dmesg</td><td>Kernel logs</td></tr>
+
+<tr><td>71</td><td>journalctl</td><td>System logs</td></tr>
+<tr><td>72</td><td>tail -f /var/log/syslog</td><td>Live logs</td></tr>
+<tr><td>73</td><td>ps aux</td><td>Running processes</td></tr>
+<tr><td>74</td><td>lsof</td><td>Open files</td></tr>
+<tr><td>75</td><td>watch</td><td>Repeat command</td></tr>
+<tr><td>76</td><td>curl</td><td>API check</td></tr>
+<tr><td>77</td><td>wget</td><td>Download data</td></tr>
+<tr><td>78</td><td>ping</td><td>Connectivity test</td></tr>
+<tr><td>79</td><td>traceroute</td><td>Network path</td></tr>
+<tr><td>80</td><td>nc</td><td>Port testing</td></tr>
+
+<!-- EXTRA DEVOPS -->
+<tr><td colspan="3"><b>DevOps Utility</b></td></tr>
+
+<tr><td>81</td><td>chmod</td><td>Change permissions</td></tr>
+<tr><td>82</td><td>chown</td><td>Change ownership</td></tr>
+<tr><td>83</td><td>scp</td><td>Copy remote files</td></tr>
+<tr><td>84</td><td>rsync</td><td>Sync files</td></tr>
+<tr><td>85</td><td>ssh</td><td>Remote login</td></tr>
+<tr><td>86</td><td>crontab -e</td><td>Schedule jobs</td></tr>
+<tr><td>87</td><td>systemctl status</td><td>Service status</td></tr>
+<tr><td>88</td><td>systemctl restart</td><td>Restart service</td></tr>
+<tr><td>89</td><td>systemctl enable</td><td>Enable service</td></tr>
+<tr><td>90</td><td>systemctl stop</td><td>Stop service</td></tr>
+
+<tr><td>91</td><td>env</td><td>Environment variables</td></tr>
+<tr><td>92</td><td>export</td><td>Set env variable</td></tr>
+<tr><td>93</td><td>history</td><td>Command history</td></tr>
+<tr><td>94</td><td>alias</td><td>Create shortcut</td></tr>
+<tr><td>95</td><td>clear</td><td>Clear terminal</td></tr>
+<tr><td>96</td><td>exit</td><td>Exit shell</td></tr>
+<tr><td>97</td><td>hostname</td><td>System name</td></tr>
+<tr><td>98</td><td>whoami</td><td>Current user</td></tr>
+<tr><td>99</td><td>date</td><td>System date</td></tr>
+<tr><td>100</td><td>uptime</td><td>System running time</td></tr>
+
+</table>
+
+</body>
+</html>

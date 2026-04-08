@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>150 DevOps Linux Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f6f8;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>150 Important Linux Commands for DevOps</h1>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Command</th>
+        <th>Description</th>
+    </tr>
+
+    <!-- Commands Start -->
+    <tr><td>1</td><td>ls</td><td>List directory contents</td></tr>
+    <tr><td>2</td><td>ls -l</td><td>List files with details</td></tr>
+    <tr><td>3</td><td>ls -a</td><td>Show hidden files</td></tr>
+    <tr><td>4</td><td>pwd</td><td>Print working directory</td></tr>
+    <tr><td>5</td><td>cd</td><td>Change directory</td></tr>
+    <tr><td>6</td><td>cd ..</td><td>Move to parent directory</td></tr>
+    <tr><td>7</td><td>mkdir</td><td>Create directory</td></tr>
+    <tr><td>8</td><td>rmdir</td><td>Remove empty directory</td></tr>
+    <tr><td>9</td><td>rm -rf</td><td>Delete directory forcefully</td></tr>
+    <tr><td>10</td><td>cp</td><td>Copy files/directories</td></tr>
+
+    <tr><td>11</td><td>mv</td><td>Move/rename files</td></tr>
+    <tr><td>12</td><td>touch</td><td>Create empty file</td></tr>
+    <tr><td>13</td><td>cat</td><td>View file content</td></tr>
+    <tr><td>14</td><td>less</td><td>View file page by page</td></tr>
+    <tr><td>15</td><td>head</td><td>Show first 10 lines</td></tr>
+    <tr><td>16</td><td>tail</td><td>Show last 10 lines</td></tr>
+    <tr><td>17</td><td>tail -f</td><td>Monitor logs in real time</td></tr>
+    <tr><td>18</td><td>nano</td><td>Simple text editor</td></tr>
+    <tr><td>19</td><td>vim</td><td>Advanced text editor</td></tr>
+    <tr><td>20</td><td>echo</td><td>Print text/output</td></tr>
+
+    <tr><td>21</td><td>whoami</td><td>Current logged-in user</td></tr>
+    <tr><td>22</td><td>id</td><td>User identity info</td></tr>
+    <tr><td>23</td><td>uname -a</td><td>System information</td></tr>
+    <tr><td>24</td><td>hostname</td><td>Show system hostname</td></tr>
+    <tr><td>25</td><td>date</td><td>Display date/time</td></tr>
+    <tr><td>26</td><td>uptime</td><td>System uptime</td></tr>
+    <tr><td>27</td><td>top</td><td>Real-time process monitoring</td></tr>
+    <tr><td>28</td><td>htop</td><td>Advanced process viewer</td></tr>
+    <tr><td>29</td><td>ps aux</td><td>List running processes</td></tr>
+    <tr><td>30</td><td>kill</td><td>Terminate process</td></tr>
+
+    <tr><td>31</td><td>kill -9</td><td>Force kill process</td></tr>
+    <tr><td>32</td><td>df -h</td><td>Disk usage</td></tr>
+    <tr><td>33</td><td>du -sh</td><td>Directory size</td></tr>
+    <tr><td>34</td><td>free -m</td><td>Memory usage</td></tr>
+    <tr><td>35</td><td>chmod</td><td>Change permissions</td></tr>
+    <tr><td>36</td><td>chown</td><td>Change ownership</td></tr>
+    <tr><td>37</td><td>grep</td><td>Search text in files</td></tr>
+    <tr><td>38</td><td>find</td><td>Search files</td></tr>
+    <tr><td>39</td><td>locate</td><td>Quick file search</td></tr>
+    <tr><td>40</td><td>which</td><td>Command location</td></tr>
+
+    <tr><td>41</td><td>whereis</td><td>Locate binary/source</td></tr>
+    <tr><td>42</td><td>wget</td><td>Download files</td></tr>
+    <tr><td>43</td><td>curl</td><td>Transfer data from URL</td></tr>
+    <tr><td>44</td><td>ping</td><td>Check network connectivity</td></tr>
+    <tr><td>45</td><td>ifconfig</td><td>Network config</td></tr>
+    <tr><td>46</td><td>ip a</td><td>Show IP address</td></tr>
+    <tr><td>47</td><td>netstat</td><td>Network stats</td></tr>
+    <tr><td>48</td><td>ss</td><td>Socket stats</td></tr>
+    <tr><td>49</td><td>scp</td><td>Secure file copy</td></tr>
+    <tr><td>50</td><td>ssh</td><td>Remote login</td></tr>
+
+        <tr><td>51</td><td>rsync</td><td>Sync files between systems</td></tr>
+    <tr><td>52</td><td>tar -cvf</td><td>Create archive</td></tr>
+    <tr><td>53</td><td>tar -xvf</td><td>Extract archive</td></tr>
+    <tr><td>54</td><td>gzip</td><td>Compress file</td></tr>
+    <tr><td>55</td><td>gunzip</td><td>Decompress file</td></tr>
+    <tr><td>56</td><td>zip</td><td>Create zip file</td></tr>
+    <tr><td>57</td><td>unzip</td><td>Extract zip</td></tr>
+    <tr><td>58</td><td>history</td><td>Command history</td></tr>
+    <tr><td>59</td><td>clear</td><td>Clear terminal</td></tr>
+    <tr><td>60</td><td>exit</td><td>Exit shell</td></tr>
+
+    <tr><td>61</td><td>alias</td><td>Create shortcut commands</td></tr>
+    <tr><td>62</td><td>unalias</td><td>Remove alias</td></tr>
+    <tr><td>63</td><td>env</td><td>Environment variables</td></tr>
+    <tr><td>64</td><td>export</td><td>Set environment variable</td></tr>
+    <tr><td>65</td><td>crontab -e</td><td>Edit cron jobs</td></tr>
+    <tr><td>66</td><td>crontab -l</td><td>List cron jobs</td></tr>
+    <tr><td>67</td><td>systemctl start</td><td>Start service</td></tr>
+    <tr><td>68</td><td>systemctl stop</td><td>Stop service</td></tr>
+    <tr><td>69</td><td>systemctl restart</td><td>Restart service</td></tr>
+    <tr><td>70</td><td>systemctl status</td><td>Service status</td></tr>
+
+    <tr><td>71</td><td>journalctl</td><td>View logs</td></tr>
+    <tr><td>72</td><td>service</td><td>Manage services</td></tr>
+    <tr><td>73</td><td>mount</td><td>Mount filesystem</td></tr>
+    <tr><td>74</td><td>umount</td><td>Unmount filesystem</td></tr>
+    <tr><td>75</td><td>lsblk</td><td>Block devices</td></tr>
+    <tr><td>76</td><td>fdisk -l</td><td>Disk partitions</td></tr>
+    <tr><td>77</td><td>mkfs</td><td>Create filesystem</td></tr>
+    <tr><td>78</td><td>blkid</td><td>UUID info</td></tr>
+    <tr><td>79</td><td>uptime</td><td>System running time</td></tr>
+    <tr><td>80</td><td>dmesg</td><td>Kernel logs</td></tr>
+
+    <tr><td>81</td><td>watch</td><td>Run command repeatedly</td></tr>
+    <tr><td>82</td><td>xargs</td><td>Build argument list</td></tr>
+    <tr><td>83</td><td>cut</td><td>Extract columns</td></tr>
+    <tr><td>84</td><td>awk</td><td>Pattern scanning</td></tr>
+    <tr><td>85</td><td>sed</td><td>Stream editor</td></tr>
+    <tr><td>86</td><td>sort</td><td>Sort output</td></tr>
+    <tr><td>87</td><td>uniq</td><td>Remove duplicates</td></tr>
+    <tr><td>88</td><td>tee</td><td>Output to file</td></tr>
+    <tr><td>89</td><td>diff</td><td>Compare files</td></tr>
+    <tr><td>90</td><td>cmp</td><td>Compare binary files</td></tr>
+
+    <tr><td>91</td><td>basename</td><td>Extract filename</td></tr>
+    <tr><td>92</td><td>dirname</td><td>Extract directory</td></tr>
+    <tr><td>93</td><td>yes</td><td>Auto input yes</td></tr>
+    <tr><td>94</td><td>sleep</td><td>Delay execution</td></tr>
+    <tr><td>95</td><td>time</td><td>Measure execution time</td></tr>
+    <tr><td>96</td><td>who</td><td>Logged users</td></tr>
+    <tr><td>97</td><td>w</td><td>User activity</td></tr>
+    <tr><td>98</td><td>last</td><td>Login history</td></tr>
+    <tr><td>99</td><td>groups</td><td>User groups</td></tr>
+    <tr><td>100</td><td>passwd</td><td>Change password</td></tr>
+
+    <!-- Continue -->
+    <tr><td>101</td><td>useradd</td><td>Create user</td></tr>
+    <tr><td>102</td><td>userdel</td><td>Delete user</td></tr>
+    <tr><td>103</td><td>groupadd</td><td>Create group</td></tr>
+    <tr><td>104</td><td>groupdel</td><td>Delete group</td></tr>
+    <tr><td>105</td><td>su</td><td>Switch user</td></tr>
+    <tr><td>106</td><td>sudo</td><td>Run as root</td></tr>
+    <tr><td>107</td><td>uptime</td><td>System uptime</td></tr>
+    <tr><td>108</td><td>reboot</td><td>Restart system</td></tr>
+    <tr><td>109</td><td>shutdown</td><td>Shutdown system</td></tr>
+    <tr><td>110</td><td>hostnamectl</td><td>Set hostname</td></tr>
+
+    <tr><td>111</td><td>timedatectl</td><td>Manage time</td></tr>
+    <tr><td>112</td><td>uptime</td><td>Check system time</td></tr>
+    <tr><td>113</td><td>lsusb</td><td>USB devices</td></tr>
+    <tr><td>114</td><td>lspci</td><td>PCI devices</td></tr>
+    <tr><td>115</td><td>free</td><td>Memory info</td></tr>
+    <tr><td>116</td><td>uptime</td><td>System status</td></tr>
+    <tr><td>117</td><td>vmstat</td><td>Memory stats</td></tr>
+    <tr><td>118</td><td>iostat</td><td>Disk IO stats</td></tr>
+    <tr><td>119</td><td>mpstat</td><td>CPU stats</td></tr>
+    <tr><td>120</td><td>sar</td><td>System activity</td></tr>
+
+    <tr><td>121</td><td>nc</td><td>Network testing</td></tr>
+    <tr><td>122</td><td>telnet</td><td>Remote connection</td></tr>
+    <tr><td>123</td><td>dig</td><td>DNS lookup</td></tr>
+    <tr><td>124</td><td>nslookup</td><td>DNS query</td></tr>
+    <tr><td>125</td><td>host</td><td>DNS info</td></tr>
+    <tr><td>126</td><td>iptables</td><td>Firewall rules</td></tr>
+    <tr><td>127</td><td>firewall-cmd</td><td>Manage firewall</td></tr>
+    <tr><td>128</td><td>getenforce</td><td>SELinux status</td></tr>
+    <tr><td>129</td><td>setenforce</td><td>Set SELinux mode</td></tr>
+    <tr><td>130</td><td>chcon</td><td>Change SELinux context</td></tr>
+
+    <tr><td>131</td><td>docker ps</td><td>List containers</td></tr>
+    <tr><td>132</td><td>docker images</td><td>List images</td></tr>
+    <tr><td>133</td><td>docker run</td><td>Run container</td></tr>
+    <tr><td>134</td><td>docker stop</td><td>Stop container</td></tr>
+    <tr><td>135</td><td>docker rm</td><td>Remove container</td></tr>
+    <tr><td>136</td><td>docker exec</td><td>Execute inside container</td></tr>
+    <tr><td>137</td><td>docker logs</td><td>View container logs</td></tr>
+    <tr><td>138</td><td>kubectl get pods</td><td>List pods</td></tr>
+    <tr><td>139</td><td>kubectl describe pod</td><td>Pod details</td></tr>
+    <tr><td>140</td><td>kubectl logs</td><td>Pod logs</td></tr>
+
+    <tr><td>141</td><td>kubectl apply</td><td>Apply config</td></tr>
+    <tr><td>142</td><td>kubectl delete</td><td>Delete resource</td></tr>
+    <tr><td>143</td><td>kubectl exec</td><td>Exec into pod</td></tr>
+    <tr><td>144</td><td>kubectl get svc</td><td>List services</td></tr>
+    <tr><td>145</td><td>kubectl top</td><td>Resource usage</td></tr>
+    <tr><td>146</td><td>helm install</td><td>Install chart</td></tr>
+    <tr><td>147</td><td>helm list</td><td>List releases</td></tr>
+    <tr><td>148</td><td>helm upgrade</td><td>Upgrade release</td></tr>
+    <tr><td>149</td><td>helm rollback</td><td>Rollback release</td></tr>
+    <tr><td>150</td><td>helm uninstall</td><td>Remove release</td></tr>
+
+</table>
+
+</body>
+</html>
